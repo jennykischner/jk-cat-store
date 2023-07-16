@@ -1,0 +1,42 @@
+.Logo {
+  width: 150px;
+}
+
+.navbar {
+  background-color: #2f7dbf;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.titulo {
+  font-size: 20px;
+  display: flex;
+  padding: 0 40px;
+}
+
+.me-auto {
+  display: flex;
+  padding: 0 250px;
+}
+.navbar-brand {
+  color: #fff;
+}
+
+.nav-link {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  color: #2c446b;
+}
+
+.CartWidget{
+    display: flex;
+    width: 100px;
+}
+
+.CartWidget path{
+    fill: #fff;
+}
