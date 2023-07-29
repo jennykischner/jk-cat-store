@@ -1,30 +1,36 @@
+
 .Logo {
   width: 150px;
 }
 
 .navbar {
   background-color: #2f7dbf;
+  background: linear-gradient(to right, #ffffff 10%, #2f7dbf 50%);
+  background-size: 100%;
   color: #fff;
   padding: 10px 0;
 }
 
-.titulo {
+.titulo-logo {
   font-size: 20px;
   display: flex;
   padding: 0 40px;
 }
 
-.me-auto {
+.me-auto  {
   display: flex;
-  padding: 0 250px;
+  padding: 0 300px;
 }
+
 .navbar-brand {
-  color: #fff;
+  color: black;
 }
+
+
 
 .nav-link {
   color: #fff;
-  margin: 0 10px;
+  margin: 0 20px;
   font-size: 20px;
 }
 
@@ -38,5 +44,55 @@
 }
 
 .CartWidget path{
-    fill: #fff;
+  fill: #fff;
+}
+
+
+.titulo-pricipal{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 30px;
+}
+
+/*Estilos Cards de productos*/
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.card-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.card-image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-button {
+  width: 100%;
+  border-radius: 4px;
 }

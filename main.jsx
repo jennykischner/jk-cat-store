@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
-import { ChakraProvider } from '@chakra-ui/react'
+import './src/components/index.css'
+import ItemList from './src/components/ItemList.jsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <ChakraProvider>
-    <App />
-    </ChakraProvider>
+  <div>
+    <App />,
+    <ItemList/>
+    </div>
 )
