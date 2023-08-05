@@ -1,4 +1,4 @@
 # JK CAT STORE
 
-![Proyecto](../src/assets/img/gif.mp4)
+![Nombre Alternativo](src/assets/img/GIF.gif)
 
