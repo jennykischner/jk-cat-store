@@ -1,4 +1,4 @@
 # JK CAT STORE
 
-![Proyecto](ruta/del/gif.gif)
+![Proyecto](ruta/del/gif.gif.mp4)
 
