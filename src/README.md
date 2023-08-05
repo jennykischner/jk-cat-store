@@ -1,2 +1,2 @@
-![JK CAT STORE](./assets/img/GIF.mp4)
+![JK CAT STORE](../src/assets/img/GIF.mp4)
 
