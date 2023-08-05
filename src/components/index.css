@@ -48,10 +48,79 @@
 }
 
 
-.titulo-pricipal{
+/* Estilos para el contenedor principal */
+.estilo-home {
   display: flex;
-  justify-content: space-evenly;
-  font-size: 30px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.titulo-principal {
+  text-align: center;
+}
+
+
+.Imagen-Principal {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.Imagen-Principal img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.estilo-home img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+
+.parrafo-principal,
+.parrafo-secundario {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.image-container-principal,
+.image-container-secundario {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.image-container-principal img,
+.image-container-secundario img {
+  max-width: 250px; 
+  height: auto;
+  margin: 5px; 
+}
+
+
+.Imagen-Footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+.Imagen-Footer img {
+  max-width: 50%; 
+  height: auto;
+  display: block;
 }
 
 /*Estilos Cards de productos*/
@@ -159,3 +228,4 @@
 .count-container button {
   margin: 0 5px;
 }
+

@@ -5,7 +5,7 @@ const Accesorios = () => {
   return (
     <div>
       
-      <ItemListContainer greeting="¡Bienvenido a la sección de Accesorios!" category="accesorios" />
+      <ItemListContainer category="accesorios" />
     </div>
   );
 };
