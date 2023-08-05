@@ -1,4 +1,4 @@
 # JK CAT STORE
 
-(../src/assets/img/GIF)
+![Proyecto](ruta/del/gif.gif)
 
