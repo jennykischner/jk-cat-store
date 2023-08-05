@@ -1,4 +1,4 @@
-# JK CAT STORE
 
-![Nombre Alternativo](src/assets/img/GIF.gif)
+
+![JK CAT STORE](src/assets/img/GIF)
 
