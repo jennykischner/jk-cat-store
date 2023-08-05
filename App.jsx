@@ -13,20 +13,20 @@ const App = () => {
   return (
     <BrowserRouter>
       <NavBar />
-
       <Routes>
-
-        <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/cart" element={<Cart/>}/>
-        <Route exact path="/contact" element={<Contact/>}/>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/contact" element={<Contact />} />
         <Route path="/items" element={<ItemListContainer />} />
-        <Route path="/items/:id" element={<ItemDetailContainer />} />
+        <Route path="/items/:id" element={<ItemDetailContainer />} /> 
         <Route path="/alimentos" element={<Alimentos />} />
         <Route path="/accesorios" element={<Accesorios />} />
-
-        </Routes>
+      </Routes>
     </BrowserRouter>
   );
 };
 
 export default App;
+
+
+
