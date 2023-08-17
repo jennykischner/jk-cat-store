@@ -1,3 +1,6 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "@fortawesome/fontawesome-free/css/fontawesome.css";
+@import "@fortawesome/fontawesome-free/css/solid.css";
 
 .Logo {
   width: 150px;
@@ -38,14 +41,14 @@
   color: #2c446b;
 }
 
-.CartWidget{
-    display: flex;
-    width: 100px;
+.carrito__link--icono{
+  display: flex;
+  width: 100px;
+  height: 30px;
+  color: #ffffff;
 }
 
-.CartWidget path{
-  fill: #fff;
-}
+
 
 
 /* Estilos para el contenedor principal */
