@@ -1,4 +1,4 @@
-import { FaOpencart } from "react-icons/fa";
+import { FiShoppingCart } from "react-icons/fi";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ export const CartWidget = () => {
   return (
     <div className="carrito">
       <Link to="/cart" className="carrito__link">
-        <FaOpencart className="carrito__link--icono" />
+      <FiShoppingCart/>
         <p>{totalAmount}</p>
       </Link>
     </div>

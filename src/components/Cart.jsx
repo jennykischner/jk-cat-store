@@ -20,7 +20,7 @@ export const Cart = ({ id, title, price, amount }) => {
           <p>${price}</p>
         </div>
         <div className="carrito__prod--subtotal">
-          <small>Subtotal</small>
+          <small>Total</small>
           <p>${price * amount}</p>
         </div>
         <button
