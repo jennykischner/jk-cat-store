@@ -2,9 +2,9 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {CartWidget} from "../components/CartWidget";
 import logo from "../assets/img/imagen-logo.jpeg";
 import {Link} from "react-router-dom"
+import CartWidget from "../components/CartWidget"; 
 
 
 const NavBar = () => {
@@ -22,10 +22,7 @@ const NavBar = () => {
             <Link to={"/contact"} className="nav-link">Contacto</Link>
           </Nav>
         </Container>
-        <Link to={"/Cart"}>
-          <CartWidget/>
-        </Link>
-        
+        <CartWidget />
       </Navbar>
     </div>
   );

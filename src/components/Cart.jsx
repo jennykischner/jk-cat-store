@@ -1,35 +1,51 @@
+import React, { useContext } from "react";
 import { FaTrashAlt } from "react-icons/fa";
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../context/CartContextProvide";
 
-export const Cart = ({ id, title, price, amount }) => {
-  const { removeItem } = useContext(CartContext);
+const Cart = () => {
+  const { cart, removeItem } = useContext(CartContext);
+
+  const calculateSubtotal = (product) => {
+    return product.price * product.amount;
+  };
+
+  const total = cart.reduce((acc, product) => acc + calculateSubtotal(product), 0);
 
   return (
-    <div className="carrito">
-      <div id="carrito__productos" className="carrito__prod">
-        <div className="carrito__prod--titulo">
-          <h3>{title}</h3>
+    <div className="cart">
+      {cart.map((product) => (
+        <div key={product.id} className="cart__product">
+          <div className="cart__product--info">
+            <div className="cart__product--title">
+              <h3>{product.title}</h3>
+            </div>
+            <div className="cart__product--quantity">
+              <small>Cantidad</small>
+              <p>{isNaN(product.amount) ? 0 : product.amount}</p>
+            </div>
+            <div className="cart__product--price">
+              <small>Precio</small>
+              <p>${product.price}</p>
+            </div>
+            <div className="cart__product--total">
+              <small>Total</small>
+              <p>${isNaN(product.price) || isNaN(product.amount) ? 0 : calculateSubtotal(product)}</p>
+            </div>
+            <button className="cart__product--remove" onClick={() => removeItem(product.id)}>
+              <FaTrashAlt />
+            </button>
+          </div>
         </div>
-        <div className="carrito__prod--cant">
-          <small>Cantidad</small>
-          <p>{amount}</p>
-        </div>
-        <div className="carrito__prod--precio">
-          <small>Precio</small>
-          <p>${price}</p>
-        </div>
-        <div className="carrito__prod--subtotal">
-          <small>Total</small>
-          <p>${price * amount}</p>
-        </div>
-        <button
-          className="carrito__prod--eliminar"
-          onClick={() => removeItem(id)}
-        >
-          <FaTrashAlt />
-        </button>
+      ))}
+
+      <div className="cart__subtotal">
+        <p>Subtotal: ${total}</p>
+      </div>
+      <div className="cart__total">
+        <p>Total de la compra: ${total}</p>
       </div>
     </div>
   );
 };
+
+export default Cart;

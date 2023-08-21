@@ -47,9 +47,12 @@
   height: 30px;
   color: #ffffff;
   font-size: 25px;
+  text-decoration: none;  
 }
 
-
+.carrito__amount{
+  font-size: 20px;
+}
 
 
 /* Estilos para el contenedor principal */
