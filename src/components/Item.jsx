@@ -12,7 +12,7 @@ const Item = ({ itemId, name, price, image }) => {
         <Card.Text>Precio: ${price}</Card.Text>
 
         <Link to={`/items/${itemId}`}>
-          <Button variant="primary">Detalles</Button>
+          <Button className='card-button'>Detalles</Button>
         </Link>
 
       </Card.Body>

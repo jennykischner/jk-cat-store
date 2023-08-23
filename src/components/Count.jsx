@@ -17,9 +17,9 @@ const Count = ({ initialCount, onCountChange }) => {
 
   return (
     <div>
-      <button onClick={handleDecrement}>-</button>
+      <button className="product-count" onClick={handleDecrement}>-</button>
       <span>{count}</span>
-      <button onClick={handleIncrement}>+</button>
+      <button className="product-count" onClick={handleIncrement}>+</button>
     </div>
   );
 };

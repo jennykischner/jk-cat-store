@@ -4,6 +4,7 @@ import Count from './Count';
 import { Card } from 'react-bootstrap'; 
 import { CartContext } from '../context/CartContextProvide';
 
+
 const ItemDetail = ({ productos }) => {
   const { id } = useParams();
   const itemId = parseInt(id);
@@ -28,23 +29,25 @@ const ItemDetail = ({ productos }) => {
     setAddedToCart(true);
   };
 
+  
   return (
-    <>
+    <div className="center-container">
       {filteredProducts.map((p) => (
-        <Card key={p.id}> 
-          <Card.Img variant="top" src={p.image} alt={p.name} />
+        <Card key={p.id} className="product-card"> 
+          <Card.Img className="product-image" variant="top" src={p.image} alt={p.name}  />
           <Card.Body>
-            <Card.Title>{p.name}</Card.Title>
-            <Card.Text>{p.description}</Card.Text>
-            <Count initialCount={selectedQuantity} onCountChange={handleCountChange} />
-            <button onClick={() => handleAddToCart(p)}>Añadir al carrito</button>
-            {addedToCart && <p>Producto añadido al carrito</p>}
+            <Card.Title className="product-title">{p.name}</Card.Title>
+            <Card.Text className="product-description">{p.description}</Card.Text>
+            <Count  initialCount={selectedQuantity} onCountChange={handleCountChange}  />
+            <button onClick={() => handleAddToCart(p)} className="add-to-cart-button">Añadir al carrito</button>
+            {addedToCart && <p className="added-to-cart-message">Producto añadido al carrito</p>}
           </Card.Body>
         </Card>
       ))}
-    </>
+    </div>
   );
 };
+
 
 export default ItemDetail;
 

@@ -44,6 +44,7 @@ const Cart = () => {
       <div className="cart__total">
         <p>Total de la compra: ${total}</p>
       </div>
+      <button className="finalizar-compra-button">Finalizar Compra</button>
     </div>
   );
 };
