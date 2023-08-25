@@ -1,6 +1,8 @@
 import React from 'react';
+import Huellitas from "../components/Huellitas";
 
 const Home = () => {
+
   return (
     <div className="estilo-home">
       <h1 className="titulo-principal">Bienvenidos a JK CAT STORE</h1>
@@ -27,7 +29,9 @@ const Home = () => {
             de tus amados compañeros peludos. Explora nuestra variedad de alimentos
             y accesorios para tus gatos.
           </p>
+          
         </div>
+        <Huellitas/>
       </div>
     </div>
   );

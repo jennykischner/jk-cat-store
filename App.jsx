@@ -25,6 +25,7 @@ const App = () => {
         <Route path="/alimentos" element={<Alimentos />} />
         <Route path="/accesorios" element={<Accesorios />} />
       </Routes>
+      
     </BrowserRouter>
     </CartContextProvider>
 

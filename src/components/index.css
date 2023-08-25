@@ -437,6 +437,71 @@ span{
   padding: 10px;
 }
 
+/*Estilos Huellitas*/
 
+.container__steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 50px;
+  height: 100px;
+  left: 200px;
+  bottom: 10%;
+}
 
+.container__step {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  opacity: 0;
+  animation-name: desvanecer;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: opacity 0.3s ease-in-out;
+}
 
+.container__step.active {
+  opacity: 1;
+}
+
+.step-1 {
+  bottom: 10px;
+  transform: rotateZ(18deg);
+  left: 40px;
+  animation-delay: 2s;
+}
+
+.step-2 {
+  bottom: 50px;
+  transform: rotateZ(-18deg);
+  left: 60px;
+  animation-delay: 3s;
+}
+
+.step-3 {
+  bottom: 90px;
+  transform: rotateZ(18deg);
+  left: 40px;
+  animation-delay: 3.8s;
+}
+
+.step-4 {
+  bottom: 130px;
+  transform: rotateZ(-18deg);
+  left: 60px;
+  animation-delay: 4.5s;
+}
+
+@keyframes desvanecer {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
