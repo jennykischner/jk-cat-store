@@ -5,6 +5,7 @@ import { Card } from 'react-bootstrap';
 import { CartContext } from '../context/CartContextProvide';
 
 
+
 const ItemDetail = ({ productos }) => {
   const { id } = useParams();
   const itemId = parseInt(id);
@@ -42,7 +43,10 @@ const ItemDetail = ({ productos }) => {
             <button onClick={() => handleAddToCart(p)} className="add-to-cart-button">Añadir al carrito</button>
             {addedToCart && <p className="added-to-cart-message">Producto añadido al carrito</p>}
           </Card.Body>
+       
         </Card>
+     
+        
       ))}
     </div>
   );

@@ -24,7 +24,7 @@ const productos = [
   { id: 4, image: AlimentoImage4, name: "Royal Canin Feline ", price: 2500, category: "alimentos", description:"ejemplo"  },
   { id: 5, image: AlimentoImage5, name: "Royal Canin Adult", price: 4500, category: "alimentos", description:"ejemplo"  },
   { id: 6, image: AlimentoImage6, name: "Royal Canin Kitten", price: 2500, category: "alimentos", description:"ejemplo"  },
-  { id: 7, image: AccesorioImage1 , name: "Canil", price: 4500, category: "accesorios", description:"ejemplo"  },
+  { id: 7, image: AccesorioImage1, name: "Canil", price: 4500, category: "accesorios", description:"ejemplo"  },
   { id: 8, image: AccesorioImage2 , name: "Mochila", price: 3500, category: "accesorios", description:"ejemplo"  },
   { id: 9, image: AccesorioImage3 , name: "Comedero", price: 1500, category: "accesorios", description:"ejemplo"  },
   { id: 10, image: AccesorioImage4 , name: "Comedero 2", price: 2500, category: "accesorios", description:"ejemplo"  },

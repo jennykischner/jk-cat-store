@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { CartContext } from "../context/CartContextProvide";
+import ImagenIndependiente from "../components/ImagenIndependiente";
 
 const Cart = () => {
   const { cart, removeItem } = useContext(CartContext);
@@ -12,7 +13,9 @@ const Cart = () => {
   const total = cart.reduce((acc, product) => acc + calculateSubtotal(product), 0);
 
   return (
+   
     <div className="cart">
+       
       {cart.map((product) => (
         <div key={product.id} className="cart__product">
           <div className="cart__product--info">
@@ -37,6 +40,7 @@ const Cart = () => {
           </div>
         </div>
       ))}
+      
 
       <div className="cart__subtotal">
         <p>Subtotal: ${total}</p>
@@ -45,8 +49,11 @@ const Cart = () => {
         <p>Total de la compra: ${total}</p>
       </div>
       <button className="finalizar-compra-button">Finalizar Compra</button>
+      <ImagenIndependiente />
     </div>
+      
   );
 };
+
 
 export default Cart;

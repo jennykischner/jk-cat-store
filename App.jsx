@@ -10,6 +10,7 @@ import Contact from "./src/components/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartContextProvider } from "./src/context/CartContextProvide";
 
+
 const App = () => {
   return (
     <CartContextProvider>
@@ -26,6 +27,7 @@ const App = () => {
       </Routes>
     </BrowserRouter>
     </CartContextProvider>
+
   );
 };
 
