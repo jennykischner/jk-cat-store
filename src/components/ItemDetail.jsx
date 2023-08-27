@@ -37,6 +37,7 @@ const ItemDetail = ({ product }) => {
           <Card.Text className="product-description">{product.description}</Card.Text>
           <Count  initialCount={selectedQuantity} onCountChange={handleCountChange}  />
           <button onClick={() => handleAddToCart(product)} className="add-to-cart-button">Añadir al carrito</button>
+          {addedToCart && <p>Producto añadido al carrito</p>}
         </Card.Body>
       </Card>
     </div>
