@@ -3,7 +3,7 @@ import ItemList from './ItemList';
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../Firebase/Firebase.jsx";
 
-const ItemListContainer = ({ category }) => { // Receive category prop
+const ItemListContainer = ({ category }) => { 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -13,7 +13,7 @@ const ItemListContainer = ({ category }) => { // Receive category prop
         const itemCollection = collection(db, "productos");
 
         let collectionRef = itemCollection;
-        if (category) { // Use the received category prop
+        if (category) { 
           collectionRef = query(collectionRef, where("category", "==", category));
         }
 
