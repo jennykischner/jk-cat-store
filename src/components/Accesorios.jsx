@@ -4,7 +4,6 @@ import ItemListContainer from './ItemListContainer';
 const Accesorios = () => {
   return (
     <div>
-      
       <ItemListContainer category="accesorios" />
     </div>
   );
