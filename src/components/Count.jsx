@@ -1,17 +1,29 @@
 import React, { useState } from 'react';
 
-const Count = ({ initialCount, onCountChange }) => {
+const Count = ({ initialCount, onCountChange, maxCount }) => {
   const [count, setCount] = useState(initialCount || 1);
 
   const handleIncrement = () => {
-    setCount(prevCount => prevCount + 1);
-    onCountChange && onCountChange(count + 1);
+    if (count < maxCount) {
+      const newCount = count + 1;
+      setCount(newCount);
+      onCountChange && onCountChange(newCount);
+    }
   };
 
   const handleDecrement = () => {
     if (count > 1) {
-      setCount(prevCount => prevCount - 1);
-      onCountChange && onCountChange(count - 1);
+      const newCount = count - 1;
+      setCount(newCount);
+      onCountChange && onCountChange(newCount);
+    }
+  };
+
+  const handleInputChange = (event) => {
+    const value = parseInt(event.target.value);
+    if (!isNaN(value) && value >= 1 && value <= maxCount) {
+      setCount(value);
+      onCountChange && onCountChange(value);
     }
   };
 

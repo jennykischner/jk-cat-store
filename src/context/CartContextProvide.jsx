@@ -13,7 +13,6 @@ export const CartContextProvider = ({ children }) => {
     }
   };
 
-  
   const removeItem = (itemId) => {
     const cartUpdate = cart.filter((prod) => prod.id !== itemId);
     setCart(cartUpdate);
@@ -27,7 +26,7 @@ export const CartContextProvider = ({ children }) => {
     return cart.some((prod) => prod.id === itemId);
   };
 
-  const totalAmount = cart.reduce((acc, product) => acc + product.amount,0);
+  const totalAmount = cart.reduce((acc, product) => acc + product.amount, 0);
   const total = cart.reduce(
     (acc, product) => acc + parseFloat(product.price) * product.amount,
     0

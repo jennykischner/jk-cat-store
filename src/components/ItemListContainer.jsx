@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import ItemList from './ItemList';
+import ItemList from "./ItemList";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../Firebase/Firebase.jsx";
 
-const ItemListContainer = ({ category }) => { 
+const ItemListContainer = ({ category }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -13,8 +13,11 @@ const ItemListContainer = ({ category }) => {
         const itemCollection = collection(db, "productos");
 
         let collectionRef = itemCollection;
-        if (category) { 
-          collectionRef = query(collectionRef, where("category", "==", category));
+        if (category) {
+          collectionRef = query(
+            collectionRef,
+            where("category", "==", category)
+          );
         }
 
         const snapshot = await getDocs(collectionRef);
@@ -36,11 +39,7 @@ const ItemListContainer = ({ category }) => {
   return (
     <div className="flex flex-col p-10">
       <div>
-        {loading ? (
-          <p>Cargando...</p>
-        ) : (
-          <ItemList productos={products} />
-        )}
+        {loading ? <p>Cargando...</p> : <ItemList productos={products} />}
       </div>
     </div>
   );

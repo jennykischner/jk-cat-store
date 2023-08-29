@@ -5,7 +5,6 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../Firebase/Firebase.jsx";
 
 const ItemDetailContainer = () => {
-
   const { id } = useParams();
 
   const [product, setProduct] = useState(null);
@@ -17,7 +16,7 @@ const ItemDetailContainer = () => {
         const itemSnapshot = await getDoc(itemRef);
 
         if (itemSnapshot.exists()) {
-          const productData = { ...itemSnapshot.data(), id: itemSnapshot.id }; 
+          const productData = { ...itemSnapshot.data(), id: itemSnapshot.id };
           setProduct(productData);
         } else {
           console.log("Producto no encontrado");

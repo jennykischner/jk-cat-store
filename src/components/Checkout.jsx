@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContextProvide";
-import ImagenIndependiente from "../components/ImagenIndependiente";
 import { CheckoutForm } from "./CheckoutForm";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../Firebase/Firebase";
@@ -16,7 +15,6 @@ export const Checkout = () => {
     setLoading(true);
 
     try {
-      
       const order = {
         buyer: {
           name,
@@ -33,7 +31,6 @@ export const Checkout = () => {
         date: Timestamp.now(),
       };
 
-
       const orderRef = await addDoc(collection(db, "orders"), order);
       setOrderId(orderRef.id);
       clearCart();
@@ -49,14 +46,15 @@ export const Checkout = () => {
   }
 
   if (orderId) {
-    return <h1 className="text-orden">Orden creada con éxito. ID: {orderId}</h1>;
+    return (
+      <h1 className="text-orden">Orden creada con éxito. ID: {orderId}</h1>
+    );
   }
 
   return (
     <div>
-      <h2 className="card-text" >Checkout</h2>
+      <h2 className="card-text">Checkout</h2>
       <CheckoutForm onConfirm={createOrder} />
-
     </div>
   );
 };

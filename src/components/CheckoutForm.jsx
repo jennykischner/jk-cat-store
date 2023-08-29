@@ -33,7 +33,7 @@ export const CheckoutForm = ({ onConfirm }) => {
         <label className="card-text">
           Teléfono:
           <input
-           className="card-text"
+            className="card-text"
             type="text"
             value={phone}
             onChange={(event) => setPhone(event.target.value)}
