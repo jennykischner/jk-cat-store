@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../Firebase/Firebase.jsx";
+import { MdCached } from "react-icons/md";
 
 const ItemListContainer = ({ category }) => {
   const [products, setProducts] = useState([]);
@@ -39,7 +40,13 @@ const ItemListContainer = ({ category }) => {
   return (
     <div className="flex flex-col p-10">
       <div>
-        {loading ? <p>Cargando...</p> : <ItemList productos={products} />}
+        {loading ? (
+          <div className="center-container">
+            {loading ? <MdCached size="36" className="loading-icon" /> : null}
+          </div>
+        ) : (
+          <ItemList productos={products} />
+        )}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import Count from "./Count";
 import { Card } from "react-bootstrap";
 import { CartContext } from "../context/CartContextProvide";
@@ -7,7 +7,6 @@ import { MdCached } from "react-icons/md";
 const ItemDetail = ({ product }) => {
   const [selectedQuantity, setSelectedQuantity] = useState(1);
   const [addedToCart, setAddedToCart] = useState(false);
-  const [showImage, setShowImage] = useState(false);
   const [loading, setLoading] = useState(true); 
 
   const { addItem } = useContext(CartContext);
@@ -26,14 +25,6 @@ const ItemDetail = ({ product }) => {
     setAddedToCart(true);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false); 
-      setShowImage(true);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   if (!product) {
     return (
@@ -48,10 +39,10 @@ const ItemDetail = ({ product }) => {
     <div className="center-container">
      <Card
         key={product.id}
-        className={`product-card ${showImage ? 'show' : ''}`}
+        className={`product-card`}
       >
         <Card.Img
-          className={`product-image ${showImage ? "show" : ""}`}
+          className={`product-image`}
           variant="top"
           src={product.image}
           alt={product.name}
