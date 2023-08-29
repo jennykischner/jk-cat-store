@@ -20,7 +20,7 @@ const Home = () => {
         <div className="image-container-principal">
           <img src="../src/assets/img/imagen-2.jpeg" alt="" />
           <img src="../src/assets/img/imagen-6.jpeg" alt="" />
-          <img src="../src/assets/img/imagen-4.jpeg" alt="" />
+          <img src="../src/assets/img/imagen-7.jpeg" alt="" />
         </div>
         <div className="texto-derecha">
           <p className="parrafo-secundario">
